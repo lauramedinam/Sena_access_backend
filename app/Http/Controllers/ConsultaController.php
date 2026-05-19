@@ -13,16 +13,16 @@ class ConsultaController extends Controller
 {
     public function index()
     {
-        $usuario = Usuario::find(); 
-        return[
-            'user_identification' => $usuario->usuario_identificacion,
-            'user_name' => $usuario->usuario_name,
-            'user_lastname' => $usuario->usuario_lastname,
-            'user_email' => $usuario->usuario_email,
-            'user_coursenumber' => $usuario->usuario_coursenumber,
-            'user_program' => $usuario->usuario_program,
-            'user_rol' => $usuario->fk_id_rol,
-        ]
-    }
+        $usuario = Usuario::first();
 
+        return [
+            'id_usuario' => $usuario->id_usuario,
+            'user_name' => $usuario->user_name,
+            'user_lastname' => $usuario->user_lastname,
+            'user_email' => $usuario->user_email,
+            'user_coursenumber' => $usuario->user_coursenumber,
+            'user_program' => $usuario->user_program,
+            'user_rol' => $usuario->fk_id_role,
+        ];
+    }
 }

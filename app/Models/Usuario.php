@@ -25,9 +25,9 @@ class Usuario extends Model
     }
 
     //relacion de un usuario puede tener muchas huellas derecha y izquierda 
-    public function huellaUsuario()
+    public function huella_usuario()
     {
-    return $this->hasMany(HuellaUsuario::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Huella_usuario::class, 'fk_id_usuario', 'id_usuario');
     }
 
     //relacion de un usuario puede tener muchas novedades
@@ -37,15 +37,15 @@ class Usuario extends Model
     }
 
     //relacion de un usuario puede tener muchos tokenrecovery
-    public function tokenRecovery()
+    public function token_recovery()
     {
-    return $this->hasMany(TokenRecovery::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Token_recovery::class, 'fk_id_usuario', 'id_usuario');
     }
     
-    // Relacion de muchos usuarios tienen un rol 
-    public function rol()
+    //relacion de un usuario puede tener muchas novedades
+    public function ingreso_equipo()
     {
-    return $this->hasMany(Role::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Ingreso_equipo::class, 'fk_id_ingreso_equipo', 'id_ingreso_equipo');
     }
 }
 

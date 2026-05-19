@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ConsultaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route ::resource('consulta_usuario',ConsultaController::class)
- ->only('index');
+
+Route::get('/consulta_usuario', [ConsultaController::class, 'index']);
