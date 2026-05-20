@@ -15,13 +15,13 @@ return new class extends Migration
            
 $table->id('id_usuario');
             $table->string('usuario_name', 50);
+            $table->string('usuario_identificacion',20)->unique()->nullable();
             $table->string('usuario_lastname', 50);
             $table->string('usuario_email', 100)->unique();
             $table->string('usuario_password', 255);
             $table->integer('usuario_coursenumber');
             $table->string('usuario_program', 100);
             $table->unsignedBigInteger('fk_id_rol');
-            $table->string('usuario_identificacion',20)->unique()->nullable();
             $table->string('profile_photo_path',2048)->unique()->nullable();
             $table->foreign('fk_id_rol')->references('id_rol')->on('roles')->onDelete('cascade');
             $table->timestamps();
