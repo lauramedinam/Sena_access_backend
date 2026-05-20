@@ -17,12 +17,16 @@ class ConsultaController extends Controller
 
         return [
             'id_usuario' => $usuario->id_usuario,
-            'user_name' => $usuario->user_name,
-            'user_lastname' => $usuario->user_lastname,
-            'user_email' => $usuario->user_email,
-            'user_coursenumber' => $usuario->user_coursenumber,
-            'user_program' => $usuario->user_program,
-            'user_rol' => $usuario->fk_id_role,
+            'usuario_name' => $usuario->usuario_name,
+            'usuario_identificacion' => $usuario->usuario_identificacion,
+            'usuario_lastname' => $usuario->usuario_lastname,
+            'usuario_email' => $usuario->usuario_email,
+            'usuario_password' => $usuario->usuario_password,
+            'usuario_coursenumber' => $usuario->usuario_coursenumber,
+            'usuario_program' => $usuario->usuario_program,
+            'fk_id_rol' => $usuario->fk_id_rol,
+            'profile_photo_path' => $usuario->profile_photo_path,
+
         ];
     }
 }
