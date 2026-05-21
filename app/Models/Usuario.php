@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Usuario extends Model
 {
     use HasFactory;
+    protected $table = 'usuarios';
+    protected $primaryKey = 'id_usuario';
 
     public function getAuthPassword()
     {
-        return $this->user_password;
+        return $this->usuario_password;
     }
 
     public function role()

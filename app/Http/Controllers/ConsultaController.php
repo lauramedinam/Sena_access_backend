@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Usuario;
+
 use Illuminate\Http\Request;
+use App\Models\Usuario;
 use App\Models\Role;
 use App\Models\Ingreso;
 use App\Models\HuellaUsuario;
@@ -12,26 +13,27 @@ use App\Models\Ingreso_equipo;
 
 class ConsultaController extends Controller
 {
-    /*
+    
     //consulta de un usuario
     public function index()
     {
-        $usuario = Usuario::find(1);
+        $usuarios = Usuario::find(2);
 
         return [
-            'id_usuario' => $usuario->id_usuario,
-            'usuario_name' => $usuario->usuario_name,
-            'usuario_identificacion' => $usuario->usuario_identificacion,
-            'usuario_lastname' => $usuario->usuario_lastname,
-            'usuario_email' => $usuario->usuario_email,
-            'usuario_password' => $usuario->usuario_password,
-            'usuario_coursenumber' =>$usuario->usuario_coursenumber,
-            'usuario_program' => $usuario->usuario_program,
-            'fk_id_rol' => $usuario->fk_id_rol,
-            'profile_photo_path' => $usuario->profile_photo_path,
+            'id_usuario' => $usuarios->id_usuario,
+            'usuario_name' => $usuarios->usuario_name,
+            'usuario_identificacion' => $usuarios->usuario_identificacion,
+            'usuario_lastname' => $usuarios->usuario_lastname,
+            'usuario_email' => $usuarios->usuario_email,
+            'usuario_password' => $usuarios->usuario_password,
+            'usuario_coursenumber' =>$usuarios->usuario_coursenumber,
+            'usuario_program' => $usuarios->usuario_program,
+            'fk_id_rol' => $usuarios->fk_id_rol,
+            'profile_photo_path' => $usuarios->profile_photo_path,
 
         ];
     }
+    
         //consulta de una novedades
     public function index1()
     {
@@ -82,7 +84,7 @@ class ConsultaController extends Controller
         
         ];
     }  
-        */
+        
 public function index5(){
     $equipos= Ingreso_equipo::find(2);
     return [
@@ -101,4 +103,5 @@ public function index5(){
            
     ];
 }
+    
 }

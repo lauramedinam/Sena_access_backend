@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\NovedadeController;
 use App\Http\Controllers\RoleController;
@@ -25,6 +26,7 @@ Route::get('/', function () {
 
 Route::get('/consulta_usuarios', [ConsultaController::class, 'index']);
 
+
 Route::get('/consulta_novedades', [ConsultaController::class, 'index1']);
 
 Route::get('/consulta_roles', [ConsultaController::class, 'index2']);
@@ -34,5 +36,6 @@ Route::get('/consulta_ingresos', [ConsultaController::class, 'index3']);
 Route::get('/consulta_token', [ConsultaController::class, 'index4']);
 
 Route::get('/consulta_equipos', [ConsultaController::class, 'index5']);
+
 
 
