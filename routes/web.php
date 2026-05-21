@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConsultaController;
+use App\Http\Controllers\NovedadeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\ConsultaController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+/*
 Route::get('/consulta_usuarios', [ConsultaController::class, 'index']);
-Route::get('/consulta_novedades', [ConsultaController::class, 'index1']);
+*/
+Route::get('/novedades', [ConsultaController::class, 'index1']);
