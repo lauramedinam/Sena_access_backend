@@ -21,25 +21,25 @@ class Usuario extends Model
 
     public function ingreso()
     {
-    return $this->hasMany(Ingreso::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Ingreso::class, 'fk_id_ingreso', 'id_ingreso');
     }
 
     //relacion de un usuario puede tener muchas huellas derecha y izquierda 
     public function huella_usuario()
     {
-    return $this->hasMany(Huella_usuario::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Huella_usuario::class, 'fk_id_huella_usuario', 'id_huella_usuario');
     }
 
     //relacion de un usuario puede tener muchas novedades
     public function novedad()
     {
-    return $this->hasMany(Novedad::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Novedad::class, 'fk_id_novedade', 'id_novedade');
     }
 
     //relacion de un usuario puede tener muchos tokenrecovery
     public function token_recovery()
     {
-    return $this->hasMany(Token_recovery::class, 'fk_id_usuario', 'id_usuario');
+    return $this->hasMany(Token_recovery::class, 'fk_id_token_recovery', 'id_token_recovery');
     }
     
     //relacion de un usuario puede tener muchas novedades

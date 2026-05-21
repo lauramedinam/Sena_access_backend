@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/consulta_usuario', [ConsultaController::class, 'index']);
+Route::get('/consulta_usuarios', [ConsultaController::class, 'index']);
+Route::get('/consulta_novedades', [ConsultaController::class, 'index1']);
