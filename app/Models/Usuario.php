@@ -39,7 +39,7 @@ class Usuario extends Model
     //relacion de un usuario puede tener muchos tokenrecovery
     public function token_recovery()
     {
-    return $this->hasMany(Token_recovery::class, 'fk_id_token_recovery', 'id_token_recovery');
+    return $this->hasMany(Token_recovery::class, 'fk_id_token', 'id_token');
     }
     
     //relacion de un usuario puede tener muchas novedades
